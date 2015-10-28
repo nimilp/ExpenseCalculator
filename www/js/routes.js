@@ -1,0 +1,30 @@
+angular.module('starter.routes',[])
+.config(function($stateProvider,$urlRouterProvider){
+    $stateProvider.state('app',{
+        url:'/app',
+        templateUrl:'templates/menu.html',
+        controller:'HomeController',
+        abstract:true
+    })
+    .state('app.home',{
+           url:'/home',
+           views:{
+               'mainContent':{
+                   templateUrl:'templates/home/home.html',
+                   controller:'HomeController'
+                }
+           }
+    })
+    .state('app.listexpenses',{
+        url:'expenseslist',
+        views:{
+            'mainContent':{
+                templateUrl:'templates/expenses/expenselist.html',
+                controller:'ExpenseListController'
+            }
+        
+        }
+    });
+    
+    $urlRouterProvider.otherwise('app/home');
+});
