@@ -16,7 +16,7 @@ angular.module('starter.routes',[])
            }
     })
     .state('app.listexpenses',{
-        url:'expenseslist',
+        url:'/expenseslist',
         views:{
             'mainContent':{
                 templateUrl:'templates/expenses/expenselist.html',

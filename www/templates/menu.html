@@ -3,7 +3,8 @@
         <ion-nav-bar class="bar-positive">
             <ion-nav-back-button></ion-nav-back-button>
                 <ion-nav-buttons side="left" >
-                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button></ion-nav-buttons>
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="mainContent"></ion-nav-view>
     </ion-side-menu-content>
@@ -11,12 +12,12 @@
         <ion-header-bar class="bar-positive"></ion-header-bar>
         <ion-content>
             <div class="list">
-                <div class="item" ui-sref="app.home"><i class="icon ion-home"></i>Home</div>
-                <div class="item" ui-sref="app.listexpenses">Expenses</div>
-                <div class="item">Categories</div>
-                <div class="item">Accounts</div>
+                <div class="item" ui-sref="app.home" menu-close><i ng-class="{'icon ion-home':platform=='android', 'icon ion-ios-home':platform!='android'}"> </i>Home</div>
+                <div class="item" ui-sref="app.listexpenses" menu-close><i class="icon ion-social-usd"> </i>Expenses</div>
+                <div class="item" menu-close><i class="icon ion-pricetags"> </i>Categories</div>
+                <div class="item" menu-close><i class="icon ion-card"> </i>Accounts</div>
                 <div class="item"></div>
-                <div class="item">Test</div>
+                <div class="item" menu-close>Settings</div>
             </div>
         </ion-content>
     </ion-side-menu>
