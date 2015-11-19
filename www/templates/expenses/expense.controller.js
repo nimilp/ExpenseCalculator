@@ -1,1 +1,1 @@
-angular.module('ExpenseModule',[]);
+angular.module('expense.module',[]);

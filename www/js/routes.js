@@ -1,4 +1,4 @@
-angular.module('starter.routes',[])
+(function () {angular.module('starter.routes',[])
 .config(function($stateProvider,$urlRouterProvider){
     $stateProvider.state('app',{
         url:'/app',
@@ -24,7 +24,26 @@ angular.module('starter.routes',[])
             }
         
         }
+    })
+    .state('app.categories',{
+          url:'/categorylist',
+          views:{
+              'mainContent':{
+                templateUrl:'templates/categories/CategoryList.html',
+                controller:'categorylistcontroller'
+              }
+           }
+           })
+    .state('app.accounts',{
+        url:'/accounts',
+        views:{
+            'mainContent':{
+                templateUrl:'templates/accounts/accountlist.html',
+                controller:'accountlistcontroller'
+            }
+    }
     });
     
     $urlRouterProvider.otherwise('app/home');
 });
+            })();

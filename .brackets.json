@@ -1,4 +1,6 @@
 {
     "jscodehints.detectedExclusions": [
+        "/Users/nimilpeethambaran/MaProjects/ExpenseCalculator/www/templates/expenses/expense.list.controller.js",
+        "/Users/nimilpeethambaran/MaProjects/ExpenseCalculator/www/js/routes.js"
     ]
 }
