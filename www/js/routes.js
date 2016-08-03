@@ -22,15 +22,15 @@
                 templateUrl:'templates/expenses/expenselist.html',
                 controller:'ExpenseListController'
             }
-        
+
         }
     })
     .state('app.categories',{
           url:'/categorylist',
           views:{
               'mainContent':{
-                templateUrl:'templates/categories/CategoryList.html',
-                controller:'categorylistcontroller'
+                templateUrl:'templates/budgetplanner/BudgetPlanner.html',
+                controller:'budgetlistcontroller'
               }
            }
            })
@@ -43,7 +43,7 @@
             }
     }
     });
-    
+
     $urlRouterProvider.otherwise('app/home');
 });
             })();
