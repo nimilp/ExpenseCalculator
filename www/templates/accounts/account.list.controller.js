@@ -1,8 +1,9 @@
+'use strict';
 (function () {
   angular.module('account.module')
-  .controller('accountlistcontroller',['$scope','cardServices', function ($scope,$cardServices){
+  .controller('accountlistcontroller',['$scope','cardServices','$ionicActionSheet','$timeout', function ($scope,$cardServices,$ionicActionSheet,$timeout){
 
-    success = function (response){
+    var success = function (response){
 
       $scope.cards= response.data.cards;
     }
@@ -12,10 +13,25 @@
 
     $cardServices.getCards(success,error);
 
+    $scope.showContextMenu = function(){
+      var hideSheet = $ionicActionSheet.show({
+      'destructiveText':'Delete',
+      'titleText':'Delete Expenses',
+      'cancelText':'Cancel',
+      'cancel':function(){
 
-    $scope.addAccount = function(){
-      console.log('clicked it');
-    }
+      },
+      'destructiveButtonClicked':function(index){
+        return true;
+      },
+      'cancelOnStateChange':'true'
+
+    });
+    $timeout(function(){
+      hideSheet()
+    },3000);
+  }
+
   }]);
 
 

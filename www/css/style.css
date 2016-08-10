@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
-.platform-ios . bar-custom{
-    background-color: none;
+.platform-ios . bar . bar-custom{
+    background-color: blue;
     color: black;
 }
 

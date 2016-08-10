@@ -1,8 +1,7 @@
 'use strict';
-(function(){
-  angular.module('account.module').controller('accountaddcontroller',['$scope',function($scope){
-    alert('');
+(function () {
+  angular.module('account.module')
+  .controller('account.add.controller',['$scope','cardServices', function ($scope,$cardServices){
 
-    console.log('in here');
-  }])
+  }]);
 })();

@@ -44,12 +44,12 @@
       }
     }
   })
-  .state('app.accounts.add',{
-    url:'/accounts/add',
+  .state('app.addaccount',{
+    url:'/add',
     views:{
       'mainContent':{
         templateUrl:'templates/accounts/add/addaccount.html',
-        controller:'accountaddcontroller'
+        controller:'account.add.controller'
       }
     }
   });
