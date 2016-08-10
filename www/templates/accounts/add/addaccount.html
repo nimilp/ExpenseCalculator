@@ -1,9 +1,22 @@
 <ion-view view-titile="Add New Account">
+  <ion-nav-buttons side="primary">
+    <a class="button button-clear">Cancel</a>
+  </ion-nav-buttons>
   <ion-nav-buttons side="secondary">
-    <a class="button button-clear">Save</a>
+    <a class="button button-clear" disabled="true">Done</a>
   </ion-nav-buttons>
   <ion-content padding="true">
+    <div class="list">
+      <label class="item item-input">
+        <input ng-model="Account.name" type="text" placeholder="Account Name">
+      </label>
+      <label class="item item-input">
+        <input ng-model="Account.desc" type="text" placeholder="Description">
+      </label>
+      <label class="item item-input">
+        <input ng-model="Account.budget" type="text" placeholder="Budget">
+      </label>
+    </div>
 
-    <div> we are here </div>
   </ion-content>
 </ion-view>

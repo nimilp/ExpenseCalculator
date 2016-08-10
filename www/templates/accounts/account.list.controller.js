@@ -22,14 +22,13 @@
 
       },
       'destructiveButtonClicked':function(index){
+        console.log(index+' on delete click');
         return true;
       },
       'cancelOnStateChange':'true'
 
     });
-    $timeout(function(){
-      hideSheet()
-    },3000);
+    
   }
 
   }]);
