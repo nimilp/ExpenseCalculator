@@ -1,12 +1,89 @@
 /* Empty. Add your own CSS if you like */
-.platform-ios . bar . bar-custom{
-    background-color: blue;
-    color: black;
+/*element{*/
+  /*--main-background-color: #c1272d;*/
+/*}*/
+.platform-ios .bar-stable{
+    background-color: #c1272d;
+    border-color: #6a1518;
+
+}
+.platform-ios .item{
+  color: #400;
+}
+.platform-ios .item-divider{
+    background-color: #c1272d;
+
+    color:#ffffff;
+
+}
+.platform-ios .bar-stable .title{
+  color: #ffffff;
 }
 
-.platform-android . bar-custom{
-    background-color: cornflowerblue;
+.platform-ios .bar-stable .button.button-clear{
+  color: #ffffff;
+}
+
+.platform-ios .button-block{
+  background-color: #c1272d;
+  color:#ffffff;
+}
+
+.platform-ios input::-webkit-input-placeholder {
+color: #A07279 !important;
+}
+
+.platform-ios color: #A07279 !important;
+}
+
+.platform-ios input::-moz-placeholder {  /* Firefox 19+ */
+color: #A07279 !important;
+}
+
+.platform-ios input:-ms-input-placeholder {
+color: #A07279 !important;
+}
+/* Android */
+.platform-android .bar-stable{
+    background-color: darkblue;
     color: white;
+}
+
+.platform-android .item{
+  color: #004;
+}
+.platform-android .item-divider{
+    background-color: darkblue;
+
+    color:#ffffff;
+
+}
+.platform-android .bar-stable .title{
+  color: #ffffff;
+}
+
+.platform-android .bar-stable .button.button-clear{
+  color: #ffffff;
+}
+
+.platform-android .button-block{
+  background-color: darkblue;
+  color:#ffffff;
+}
+
+.platform-android input::-webkit-input-placeholder {
+color: #7279a0 !important;
+}
+
+.platform-android color: #003 !important;
+}
+
+.platform-android input::-moz-placeholder {  /* Firefox 19+ */
+color: #003 !important;
+}
+
+.platform-android input:-ms-input-placeholder {
+color: #003 !important;
 }
 .bold{
   font-weight: bold;

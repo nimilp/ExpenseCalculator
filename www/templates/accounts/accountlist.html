@@ -3,7 +3,7 @@
     <a class="button button-clear icon ion-ios-plus-empty" ui-sref="app.addaccount"></a>
   </ion-nav-buttons>
   <ion-content padding="true">
-    <div ng-repeat="card in cards">
+    <div collection-repeat="card in cards">
       <div class="card" on-hold="showContextMenu()">
         <div class="item item-divider">{{card.name}}</div>
         <div class="item item-text-wrap">
