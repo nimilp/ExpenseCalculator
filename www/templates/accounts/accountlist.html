@@ -4,12 +4,14 @@
   </ion-nav-buttons>
   <ion-content padding="true">
     <div collection-repeat="card in cards">
-      <div class="card" on-hold="showContextMenu()">
+
+      <div ui-sref="app.editaccount({id:card.id})" class="card" on-hold="showContextMenu()">
         <div class="item item-divider">{{card.name}}</div>
         <div class="item item-text-wrap">
           <span class="bold">Description:</span> {{card.description}}</br>
-          <span class="bold">Amount:</span> {{card.amount}}</div>
+          <span class="bold">Amount:</span> {{card.budget}}</div>
         </div>
+
       </div>
     </ion-content>
   </ion-view>

@@ -29,6 +29,9 @@
   color:#ffffff;
 }
 
+.platform-ios .expense-input {
+  color:#400 !important; /*7F212E*/
+}
 .platform-ios input::-webkit-input-placeholder {
 color: #A07279 !important;
 }
@@ -69,6 +72,10 @@ color: #A07279 !important;
 .platform-android .button-block{
   background-color: darkblue;
   color:#ffffff;
+}
+
+.platform-android .expense-input {
+  color:#004 !important;/*3A22A6 */
 }
 
 .platform-android input::-webkit-input-placeholder {

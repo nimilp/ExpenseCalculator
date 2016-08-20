@@ -1,5 +1,5 @@
 'use strict';
-(function () {angular.module('starter.routes',[])
+(function () {angular.module('ExpenseCalculator.routes',[])
 .config(function($stateProvider,$urlRouterProvider){
   $stateProvider.state('app',{
     url:'/app',
@@ -46,6 +46,15 @@
   })
   .state('app.addaccount',{
     url:'/add',
+    views:{
+      'mainContent':{
+        templateUrl:'templates/accounts/add/addaccount.html',
+        controller:'account.add.controller'
+      }
+    }
+  })
+  .state('app.editaccount',{
+    url:'/edit/id:id',
     views:{
       'mainContent':{
         templateUrl:'templates/accounts/add/addaccount.html',
