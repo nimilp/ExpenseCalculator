@@ -5,11 +5,18 @@
   .factory('cardServices',['$http',function($http){
     var cardServices = {};
     var baseUrl = '';
-    cardServices.getCards = function(success, error){
+
+    var error = function(error){
+      console.error('Error while getting accounts '+error);
+    }
+    cardServices.getCards = function(){
       return $http({
         method:'GET',
         url:baseUrl+'/jsons/cards.json'
-      }).then(success,error);
+      }).then(function (response){
+
+        return response.data.cards;
+      },error);
 
     }
     return cardServices;

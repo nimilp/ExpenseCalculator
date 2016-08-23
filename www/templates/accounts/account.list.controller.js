@@ -3,15 +3,11 @@
   angular.module('account.module')
   .controller('accountlistcontroller',['$scope','cardServices','$ionicActionSheet','$timeout', function ($scope,$cardServices,$ionicActionSheet,$timeout){
 
-    var success = function (response){
-
-      $scope.cards= response.data.cards;
-    }
-    var error = function(error){
-      console.log('Error while getting accounts '+error);
+    var success = function(cards){
+      $scope.cards = cards;
     }
 
-    $cardServices.getCards(success,error);
+    $cardServices.getCards().then(success);
 
     $scope.showContextMenu = function(){
       var hideSheet = $ionicActionSheet.show({
@@ -28,7 +24,7 @@
       'cancelOnStateChange':'true'
 
     });
-    
+
   }
 
   }]);

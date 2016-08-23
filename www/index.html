@@ -14,7 +14,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -30,11 +30,25 @@
     <script src="templates/accounts/account.controller.js"></script>
     <script src="templates/accounts/account.list.controller.js"></script>
     <script src="templates/accounts/add/addaccount.js"></script>
+    <script src="templates/accounts/add/editaccount.js"></script>
     <script src="js/expense_service_factory.js"></script>
   </head>
   <body ng-app="ExpenseCalculator">
       <ion-nav-view>
       </ion-nav-view>
-      
+      <script id="error-list.html" type="text/ng-template">
+    <div class="error" ng-message="required">
+      <i class="ion-information-circled ion-information-circled-red"></i>
+      This field is required!
+    </div>
+    <div class="error" ng-message="minlength">
+      <i class="ion-information-circled ion-information-circled-red"></i>
+      Minimum length of this field is 6 characters!
+    </div>
+    <div class="error" ng-message="maxlength">
+      <i class="ion-information-circled ion-information-circled-red"></i>
+      Maximum length of this field is 100 characters!
+    </div>
+  </script>
   </body>
 </html>

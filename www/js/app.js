@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-(function () {angular.module('ExpenseCalculator', ['ionic','ExpenseCalculator.routes','ExpenseCalculator.maincontroller','expense.module','budget.module','account.module','expense.service.factory'])
+(function () {angular.module('ExpenseCalculator', ['ionic','ngMessages','ExpenseCalculator.routes','ExpenseCalculator.maincontroller','expense.module','budget.module','account.module','expense.service.factory'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

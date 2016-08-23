@@ -58,7 +58,7 @@
     views:{
       'mainContent':{
         templateUrl:'templates/accounts/add/addaccount.html',
-        controller:'account.add.controller'
+        controller:'account.edit.controller'
       }
     }
   });
