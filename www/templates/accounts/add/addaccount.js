@@ -7,6 +7,7 @@
       console.log(card)
       if(card.valid){
         //console.log(card.name);
+        $cardServices.saveOrUpdateCard(card);
       }
     }
   }]);
