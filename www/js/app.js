@@ -34,14 +34,12 @@
         return{
             request: function(config){
 
-                if(config.url.indexOf('/jsons/')!=-1){
-                  console.log(config.url);
+                if(config.url.indexOf('/mytask/')!=-1){
                   $rootScope.$broadcast('loading:show')
                 }
                 return config
             },
             response: function(response){
-              console.log(response);
                 $rootScope.$broadcast('loading:hide')
                 return response
             }

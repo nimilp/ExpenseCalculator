@@ -2,10 +2,12 @@
   <ion-nav-buttons side="secondary">
     <a class="button button-clear icon ion-ios-plus-empty" ui-sref="app.addaccount"></a>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content padding="true">
+    <ion-refresher pulling-text="pull down to refersh..." on-refresh="refresh()">
+    </ion-refresher>
     <div collection-repeat="card in cards">
 
-      <div ui-sref="app.editaccount({id:card.id})" class="card" on-hold="showContextMenu()">
+      <div ui-sref="app.editaccount({id:card.id})" class="card" on-hold="showContextMenu(card.id)">
         <div class="item item-divider">{{card.name}}</div>
         <div class="item item-text-wrap">
           <span class="bold">Description:</span> {{card.description}}</br>
@@ -13,5 +15,6 @@
         </div>
 
       </div>
+      <div ng-show="!cards.length">No Records Found!</div>
     </ion-content>
   </ion-view>
