@@ -1,11 +1,17 @@
 'use strict';
 (function () {
   angular.module('account.module')
-  .controller('accountlistcontroller',['$scope','cardServices','$ionicActionSheet','$timeout','$rootScope','$ionicLoading', function ($scope,$cardServices,$ionicActionSheet,$timeout,$rootScope,$ionicLoading){
+  .controller('accountlistcontroller',['$scope','cardServices','$ionicActionSheet','$timeout','$stateParams','$ionicLoading','$ionicHistory', function ($scope,$cardServices,$ionicActionSheet,$timeout,$stateParams,$ionicLoading,$ionicHistory){
 
     var success = function(cards){
       console.log(cards);
       $scope.cards = cards;
+      if($stateParams.success === 'true'){
+        // $rootScope.message = '';
+        //$ionicHistory.removeBackView();
+        console.log($stateParams);
+        $ionicLoading.show({ template: 'Item Added!', noBackdrop: true, duration: 2000 });
+      }
     }
     $scope.refresh = function(){
       $cardServices.getCards().then(success)
@@ -14,11 +20,8 @@
        $scope.$broadcast('scroll.refreshComplete');
      });;
     }
-    console.log($rootScope.message);
-    if($rootScope.message === 'Done'){
-      $rootScope.message = '';
-      $ionicLoading.show({ template: 'Item Added!', noBackdrop: true, duration: 2000 });
-    }
+
+
     $cardServices.getCards().then(success);
 
     $scope.showContextMenu = function(id){
@@ -33,6 +36,9 @@
       'destructiveButtonClicked':function(){
         //console.log(index+' on delete click');
         console.log(id);
+        $cardServices.deleteCard(id).then(function(response){
+          console.log(id+' deleted');
+        })
         return true;
       },
       'cancelOnStateChange':'true'

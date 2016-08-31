@@ -34,7 +34,8 @@
         return{
             request: function(config){
 
-                if(config.url.indexOf('/mytask/')!=-1){
+                if(config.url.indexOf('/mytask/')!=-1 && config.method !=='OPTIONS'){
+                  console.log(config.url);
                   $rootScope.$broadcast('loading:show')
                 }
                 return config

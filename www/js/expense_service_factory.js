@@ -60,12 +60,26 @@
         url:baseUrl,
         data:card
       }).then(function (response){
-        console.log(response)
-
+        //console.log(response)
+        return response.data;
         //return response.data.cards;
       },error)
     };
+    cardServices.deleteCard = function(id){
+      return $http({
+        method:'DELETE',
+        url:baseUrl+'/'+id
+      }).then(function (response){
 
+        // var cards = response.data.cards;
+        // for(var i = 0;i<cards.length;i++){
+        //   if(id === cards[i].id){
+        //     return cards[i];
+        //   }
+        // }
+        return response.data;
+      },error);
+    }
     return cardServices;
   }])
 

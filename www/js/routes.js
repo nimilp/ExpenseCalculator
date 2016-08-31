@@ -41,8 +41,10 @@
       'mainContent':{
         templateUrl:'templates/accounts/accountlist.html',
         controller:'accountlistcontroller'
+
       }
-    }
+    },
+    params:{success:'false'}
   })
   .state('app.addaccount',{
     url:'/add',
